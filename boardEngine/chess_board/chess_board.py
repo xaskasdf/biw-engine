@@ -1,10 +1,10 @@
-from layers.RPGBoardEngine.boardEngine.chess_board.chess_basic_space import ChessSpace
-from layers.baseModelLayer.boardEngine.board_logic import BoardLogic
-from layers.baseModelLayer.boardEngine.board_space import BoardSpace
-from layers.baseModelLayer.gameCharacter.game_character import GameCharacter
-from layers.baseModelLayer.game_event import GameEvent
-from layers.baseModelLayer.game_extension import GameExtension
-from layers.baseModelLayer.game_item import GameItem
+from layers.biwEngine.boardEngine.chess_board.chess_basic_space import ChessSpace
+from layers.baseGame.boardEngine.board_logic import BoardLogic
+from layers.baseGame.boardEngine.board_space import BoardSpace
+from layers.baseGame.gameCharacter.game_character import GameCharacter
+from layers.baseGame.game_event import GameEvent
+from layers.baseGame.game_extension import GameExtension
+from layers.baseGame.game_item import GameItem
 
 class ChessBoard(BoardLogic):
     _id: str

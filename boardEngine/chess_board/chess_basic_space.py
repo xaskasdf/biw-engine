@@ -1,5 +1,5 @@
-from layers.baseModelLayer.boardEngine.board_space import BoardSpace
-from layers.baseModelLayer.gameError.game_error import GameError
+from layers.baseGame.boardEngine.board_space import BoardSpace
+from layers.baseGame.gameError.game_error import GameError
 
 
 class ChessSpace(BoardSpace):
