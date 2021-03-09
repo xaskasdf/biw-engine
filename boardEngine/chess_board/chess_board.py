@@ -6,6 +6,7 @@ from layers.baseGame.game_event import GameEvent
 from layers.baseGame.game_extension import GameExtension
 from layers.baseGame.game_item import GameItem
 
+
 class ChessBoard(BoardLogic):
     _id: str
     spaces: [BoardSpace]
@@ -22,14 +23,29 @@ class ChessBoard(BoardLogic):
 
     def board_importer(self, json_board):
         import json
+
         board_data = json.load(json_board)
 
-        self.spaces = [ChessSpace().space_importer(space_data=space) for space in
-                       board_data.get("spaces", None)]
-        self.items = [ChessSpace().space_importer(item_data=item) for item in board_data.get("items", None)]
-        self.characters = [(character_data=character) for character in board_data.get("characters", None)]
-        self.events = [(event_data=event) for event in board_data.get("events", None)]
-        self.extensions = [(extension_data=extension) for extension in board_data.get("extensions", None)]
+        self.spaces = [
+            ChessSpace().space_importer(space_data=space)
+            for space in board_data.get("spaces", None)
+        ]
+        self.items = [
+            ChessSpace().space_importer(item_data=item)
+            for item in board_data.get("items", None)
+        ]
+        self.characters = [
+            ChessSpace().space_importer(character_data=character)
+            for character in board_data.get("characters", None)
+        ]
+        self.events = [
+            ChessSpace().space_importer(event_data=event)
+            for event in board_data.get("events", None)
+        ]
+        self.extensions = [
+            ChessSpace().space_importer(extension_data=extension)
+            for extension in board_data.get("extensions", None)
+        ]
 
     def create_board(self):
         # TODO: Add items, characters and extensions logic here
